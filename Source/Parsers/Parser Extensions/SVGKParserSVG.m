@@ -75,7 +75,7 @@
 		
 		if (!elementClass) {
 			elementClass = [SVGElement class];
-			SVGKitLogWarn(@"Support for '%@' element has not been implemented", name);
+			SVGKitLogError("Support for '%@' element has not been implemented", name);
 		}
 		
 		/**

@@ -45,10 +45,6 @@ You MAY also need to manually add the following Apple Frameworks to your app:
   - QuartzCore
   - CoreGraphics
   - UIKit
-
-You MAY also need to add the following 3rd party Frameworks to your app (included with SVGKit):
-  - CocoaLumberjack (in the SVGKit-iOS project, select the "3rd-party-frameworks" folder, and drag/drop whichever versions you need: iOS, tvOS, etc)
-    Remember to embed the library too (should show under Target -> General -> Embedded Binaries)
     
 ## OPTION 2: Using CocoaPods
 [CocoaPods](https://github.com/CocoaPods/CocoaPods) is a dependency manager for CocoaTouch. To do CocoaPods, adding the following in your podfile:

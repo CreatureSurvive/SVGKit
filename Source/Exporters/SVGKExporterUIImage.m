@@ -15,7 +15,7 @@
 {
 	if( [image hasSize] )
 	{
-		SVGKitLogVerbose(@"[%@] DEBUG: Generating a UIImage using the current root-object's viewport (may have been overridden by user code): {0,0,%2.3f,%2.3f}", [self class], image.size.width, image.size.height);
+		SVGKitLogError("[%@] DEBUG: Generating a UIImage using the current root-object's viewport (may have been overridden by user code): {0,0,%2.3f,%2.3f}", [self class], image.size.width, image.size.height);
 		/**
          #802: Some SVG files may lead to app crash issue when using UIGraphicsBeginImageContextWithOptions on iOS 17 or later,
          Use UIGraphicsImageRenderer when possible

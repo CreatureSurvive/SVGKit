@@ -36,31 +36,31 @@
 
 -(void) addSourceError:(NSError*) fatalError
 {
-	SVGKitLogError(@"[%@] SVG ERROR: %@", [self class], fatalError);
+	SVGKitLogError("[%@] SVG ERROR: %@", [self class], fatalError);
 	[self.errorsRecoverable addObject:fatalError];
 }
 
 -(void) addParseWarning:(NSError*) warning
 {
-	SVGKitLogWarn(@"[%@] SVG WARNING: %@", [self class], warning);
+	SVGKitLogError("[%@] SVG WARNING: %@", [self class], warning);
 	[self.warnings addObject:warning];
 }
 
 -(void) addParseErrorRecoverable:(NSError*) recoverableError
 {
-	SVGKitLogWarn(@"[%@] SVG WARNING (recoverable): %@", [self class], recoverableError);
+	SVGKitLogError("[%@] SVG WARNING (recoverable): %@", [self class], recoverableError);
 	[self.errorsRecoverable addObject:recoverableError];
 }
 
 -(void) addParseErrorFatal:(NSError*) fatalError
 {
-	SVGKitLogError(@"[%@] SVG ERROR: %@", [self class], fatalError);
+	SVGKitLogError("[%@] SVG ERROR: %@", [self class], fatalError);
 	[self.errorsFatal addObject:fatalError];
 }
 
 -(void) addSAXError:(NSError*) saxError
 {
-	SVGKitLogWarn(@"[%@] SVG ERROR: %@", [self class], [saxError localizedDescription]);
+	SVGKitLogError("[%@] SVG ERROR: %@", [self class], [saxError localizedDescription]);
 	[self.errorsFatal addObject:saxError];
 }
 

@@ -476,7 +476,7 @@ CGFloat SVGPercentageFromString (const char *string) {
 	size_t len = strlen(string);
 	
 	if (string[len-1] != '%') {
-		SVGKitLogWarn(@"Invalid percentage: %s", string);
+		SVGKitLogError("Invalid percentage: %s", string);
 		return -1;
 	}
 	
@@ -508,7 +508,7 @@ CGMutablePathRef createPathFromPointsInString (const char *string, boolean_t clo
         const char *floatPtr = progressPtr;
         float nextCoordinate = strtof(floatPtr, (char**)&progressPtr);
         if (errno != 0 || floatPtr == progressPtr) {
-            SVGKitLogError(@"Unable to parse float from path: \"%s\" errno: %d", string, errno);
+            SVGKitLogError("Unable to parse float from path: \"%s\" errno: %d", string, errno);
             return path;
         }
         
