@@ -28,7 +28,8 @@ let package = Package(
             resources: [.process("Resources/PrivacyInfo.xcprivacy")],
             publicHeadersPath: "include",
             cSettings: [
-                .headerSearchPath("privateHeaders")
+                .headerSearchPath("privateHeaders"),
+                .define("NS_BLOCK_ASSERTIONS", to: "1", .when(configuration: .release))
             ]
         ),
         .target(
